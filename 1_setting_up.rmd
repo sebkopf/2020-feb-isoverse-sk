@@ -1,0 +1,46 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+# Install CRAN packages
+
+```{r, eval=FALSE}
+# restart R
+#.rs.restartR()
+
+# install packages (might have to manually unload them if earlier versions installed)
+install.packages(c("devtools", "tidyverse", "plotly", "latex2exp"))
+```
+
+# Install GitHub packages
+
+```{r, eval=FALSE}
+# install isoreader
+devtools::install_github("isoverse/isoreader")
+
+# install isoprocessor
+devtools::install_github("isoverse/isoprocessor")
+
+
+```
+
+# Check versions
+
+```{r}
+# R version
+getRversion()
+
+# key tidyverse package versions
+packageVersion("dplyr")
+packageVersion("ggplot2")
+packageVersion("tidyr")
+
+# isoverse versions
+packageVersion("isoreader")
+packageVersion("isoprocessor")
+```
+
+
+
+
